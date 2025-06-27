@@ -1,152 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sterling Foundation | স্টার্লিং ফাউন্ডেশন</title>
-<style>
-  body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f7fa; color:#333; }
-  header { background:#004aad; color:#fff; padding: 1rem; text-align:center; }
-  nav { background:#00337f; padding: 0.5rem; text-align:center; }
-  nav button {
-    margin: 0 5px;
-    padding: 0.4rem 0.8rem;
-    border:none;
-    background:#007bff;
-    color:white;
-    cursor:pointer;
-    border-radius:4px;
-  }
-  nav button.active {
-    background:#0056b3;
-  }
-  main { max-width: 900px; margin: 2rem auto; padding: 0 1rem; }
-  section { margin-bottom: 2rem; background:#fff; padding:1rem 1.5rem; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1); }
-  h2 { color:#004aad; }
-  ul { list-style: none; padding-left: 0; }
-  li { margin-bottom: 8px; }
-  .qr-img {
-    max-width: 150px;
-    margin-top: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sterling Foundation | স্টার্লিং ফাউন্ডেশন</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9fafb;
+      color: #222;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 320px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+      text-align: center;
+      padding: 0 1rem;
+    }
+    header h1 {
+      font-size: 3.5rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.4rem;
+      margin-top: 0.5rem;
+    }
+    nav {
+      background-color: #004aad;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      background: white;
+      padding: 1.8rem 2rem;
+      margin-bottom: 2.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.1);
+    }
+    h2 {
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+    .donation-methods ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .donation-methods li {
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    .qr-code {
+      max-width: 160px;
+      margin-top: 0.6rem;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    }
+    footer {
+      background-color: #004aad;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.5rem;
+      }
+      nav a {
+        font-size: 1rem;
+      }
+      main {
+        padding: 0 0.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
 <header>
-  <h1 id="title"></h1>
-  <p id="subtitle"></p>
+  <h1>Sterling Foundation</h1>
+  <p>আসুন দরিদ্র ও অসহায়দের পাশে দাঁড়াই</p>
 </header>
 
 <nav>
-  <button id="btn-en" class="active" onclick="setLanguage('en')">English</button>
-  <button id="btn-bn" onclick="setLanguage('bn')">বাংলা</button>
+  <a href="#about">About / আমাদের সম্পর্কে</a>
+  <a href="#donate">Donate / দান করুন</a>
+  <a href="#contact">Contact / যোগাযোগ</a>
 </nav>
 
 <main>
-  <section id="about-section">
-    <h2 id="about-title"></h2>
-    <p id="about-text"></p>
+  <section id="about">
+    <h2>About Us / আমাদের সম্পর্কে</h2>
+    <p>
+      Sterling Foundation একটি চ্যারিটি ফাউন্ডেশন যা দরিদ্র ও অসহায় মানুষের সাহায্যে কাজ করে। আমরা বিশ্বাস করি সামান্য সাহায্য দিয়েও পৃথিবী বদলে যায়। আমাদের সাথে যোগ দিন, ভালো কিছু করার জন্য।
+    </p>
   </section>
 
-  <section id="donate-section">
-    <h2 id="donate-title"></h2>
-    <p id="donate-text"></p>
-    <ul id="payment-methods"></ul>
+  <section id="donate">
+    <h2>Donate with Cryptocurrency / ক্রিপ্টো দিয়ে দান করুন</h2>
+    <div class="donation-methods">
+      <ul>
+        <li>
+          <strong>Bitcoin (BTC):</strong> 1SterlingBTCAddressExample<br />
+          <img class="qr-code" src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=bitcoin:1SterlingBTCAddressExample" alt="Bitcoin QR Code" />
+        </li>
+        <li>
+          <strong>Ethereum (ETH):</strong> 0xSterlingETHAddressExample<br />
+          <img class="qr-code" src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=ethereum:0xSterlingETHAddressExample" alt="Ethereum QR Code" />
+        </li>
+        <li>
+          <strong>USDT (TRC20):</strong> TSterlingUSDTAddressExample<br />
+          <img class="qr-code" src="https://chart.googleapis.com/chart?chs=200x200&cht=qr&chl=tron:TSterlingUSDTAddressExample" alt="USDT QR Code" />
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section id="contact-section">
-    <h2 id="contact-title"></h2>
+  <section id="contact">
+    <h2>Contact Us / যোগাযোগ</h2>
     <p>Email: <a href="mailto:contact@sterlingfoundation.org">contact@sterlingfoundation.org</a></p>
     <p>Phone: +880 17XXXXXXXXX</p>
   </section>
 </main>
 
-<script>
-  const data = {
-    en: {
-      title: "Sterling Foundation",
-      subtitle: "Join us to help the poor and needy.",
-      aboutTitle: "About Us",
-      aboutText: "Sterling Foundation is dedicated to helping poor and helpless people. We believe small help can change the world.",
-      donateTitle: "Make a Donation",
-      donateText: "You can donate through the following methods. Scan the QR codes or use the payment details.",
-      paymentMethods: [
-        {
-          name: "bKash",
-          detail: "017XXXXXXXX",
-          qr: "https://i.ibb.co/7j8S1bV/bkash-qr.png"
-        },
-        {
-          name: "Nagad",
-          detail: "018XXXXXXXX",
-          qr: "https://i.ibb.co/hDVYkPV/nagad-qr.png"
-        },
-        {
-          name: "Bitcoin",
-          detail: "1SterlingBTCAddressExample",
-          qr: "https://i.ibb.co/W3dJhF5/bitcoin-qr.png"
-        }
-      ],
-      contactTitle: "Contact Us"
-    },
-    bn: {
-      title: "স্টার্লিং ফাউন্ডেশন",
-      subtitle: "দরিদ্র ও অসহায়দের সাহায্যে আমাদের সাথে যোগ দিন।",
-      aboutTitle: "আমাদের সম্পর্কে",
-      aboutText: "স্টার্লিং ফাউন্ডেশন দরিদ্র ও অসহায় মানুষের পাশে দাঁড়ায়। আমরা বিশ্বাস করি সামান্য সাহায্যেই পৃথিবী বদলে যায়।",
-      donateTitle: "দান করুন",
-      donateText: "আপনি নিচের পদ্ধতিতে দান করতে পারেন। QR কোড স্ক্যান করুন অথবা পেমেন্ট তথ্য ব্যবহার করুন।",
-      paymentMethods: [
-        {
-          name: "বিকাশ",
-          detail: "০১৭XXXXXXXX",
-          qr: "https://i.ibb.co/7j8S1bV/bkash-qr.png"
-        },
-        {
-          name: "নগদ",
-          detail: "০১৮XXXXXXXX",
-          qr: "https://i.ibb.co/hDVYkPV/nagad-qr.png"
-        },
-        {
-          name: "বিটকয়েন",
-          detail: "1SterlingBTCAddressExample",
-          qr: "https://i.ibb.co/W3dJhF5/bitcoin-qr.png"
-        }
-      ],
-      contactTitle: "যোগাযোগ করুন"
-    }
-  };
-
-  function setLanguage(lang) {
-    document.getElementById('title').innerText = data[lang].title;
-    document.getElementById('subtitle').innerText = data[lang].subtitle;
-    document.getElementById('about-title').innerText = data[lang].aboutTitle;
-    document.getElementById('about-text').innerText = data[lang].aboutText;
-    document.getElementById('donate-title').innerText = data[lang].donateTitle;
-    document.getElementById('donate-text').innerText = data[lang].donateText;
-    document.getElementById('contact-title').innerText = data[lang].contactTitle;
-
-    // Payment methods list
-    const ul = document.getElementById('payment-methods');
-    ul.innerHTML = '';
-    data[lang].paymentMethods.forEach(method => {
-      const li = document.createElement('li');
-      li.innerHTML = `<strong>${method.name}:</strong> ${method.detail}<br><img class="qr-img" src="${method.qr}" alt="${method.name} QR Code" />`;
-      ul.appendChild(li);
-    });
-
-    // Active button styling
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-    document.getElementById('btn-bn').classList.toggle('active', lang === 'bn');
-  }
-
-  // Default language English
-  setLanguage('en');
-</script>
+<footer>
+  &copy; 2025 Sterling Foundation. All rights reserved.
+</footer>
 
 </body>
 </html>
+
 
