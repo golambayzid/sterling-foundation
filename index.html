@@ -1,371 +1,156 @@
-
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sterling Foundation | দান করুন</title>
-<style>
-  :root {
-    --primary: #0d6efd;
-    --secondary: #ffc107;
-    --dark-bg: #212529;
-    --light-bg: #f0f2f5;
-  }
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-  body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: var(--light-bg);
-    color: #333;
-    line-height: 1.6;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-  header {
-    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('https://via.placeholder.com/1500x400?text=Sterling+Foundation') center/cover no-repeat;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-  }
-  header h1 {
-    font-size: 3.5em;
-  }
-  header p {
-    font-size: 1.5em;
-    margin-top: 10px;
-  }
-  nav {
-    background: var(--primary);
-    display: flex;
-    justify-content: center;
-    padding: 15px 0;
-    gap: 30px;
-  }
-  nav a {
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: color 0.3s ease;
-  }
-  nav a:hover {
-    color: var(--secondary);
-  }
-  #lang-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: var(--primary);
-    color: white;
-    border: none;
-    padding: 8px 15px;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 5px;
-    z-index: 1000;
-  }
-  section {
-    max-width: 1000px;
-    margin: auto;
-    padding: 50px 20px;
-  }
-  section h2 {
-    color: var(--primary);
-    margin-bottom: 20px;
-    text-align: center;
-    font-size: 2.2em;
-  }
-  .intro p {
-    text-align: center;
-    font-size: 1.2em;
-    max-width: 700px;
-    margin: auto;
-  }
-  .donate-button {
-    display: inline-block;
-    background-color: var(--secondary);
-    color: black;
-    padding: 14px 30px;
-    margin: 30px auto 0;
-    border-radius: 8px;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-align: center;
-  }
-  .donate-button:hover {
-    background-color: #e0a800;
-  }
-  ul {
-    list-style: none;
-    max-width: 700px;
-    margin: auto;
-    padding-left: 0;
-  }
-  ul li {
-    background: white;
-    padding: 15px 20px;
-    margin: 10px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    text-align: center;
-    font-weight: 600;
-  }
-  .crypto-section {
-    text-align: center;
-  }
-  .crypto-address {
-    background: white;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 15px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
-    border-radius: 10px;
-  }
-  .crypto-address h4 {
-    margin-bottom: 10px;
-  }
-  .crypto-address p {
-    word-break: break-all;
-    font-family: monospace;
-    user-select: all;
-    cursor: pointer;
-  }
-  .qr-code {
-    margin-top: 10px;
-    width: 150px;
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #donation-search {
-    max-width: 500px;
-    margin: 30px auto;
-    text-align: center;
-  }
-  #donation-search input[type=text] {
-    padding: 10px;
-    width: 70%;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-  }
-  #donation-search button {
-    padding: 11px 20px;
-    font-size: 1em;
-    background: var(--primary);
-    color: white;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  #donation-results {
-    margin-top: 20px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  #donation-results table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  #donation-results th, #donation-results td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
-  }
-  #donation-results th {
-    background: var(--primary);
-    color: white;
-  }
-  footer {
-    background: var(--dark-bg);
-    color: white;
-    text-align: center;
-    padding: 30px 20px;
-    margin-top: auto;
-  }
-  @media (max-width: 600px) {
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sterling Foundation | স্টার্লিং ফাউন্ডেশন</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0;
+      background: #f7f9fc;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+      height: 300px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+    }
     header h1 {
-      font-size: 2.2em;
+      font-size: 3rem;
+      margin: 0.3rem;
     }
     header p {
-      font-size: 1em;
+      font-size: 1.3rem;
+      margin: 0.3rem;
     }
     nav {
-      flex-direction: column;
-      gap: 10px;
+      background-color: #004aad;
+      padding: 0.5rem;
+      text-align: center;
     }
-    #donation-search input[type=text] {
-      width: 60%;
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 600;
     }
-  }
-</style>
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 3rem;
+    }
+    h2 {
+      color: #004aad;
+      margin-bottom: 1rem;
+    }
+    .donation-info {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgb(0 0 0 / 0.1);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .donation-info img {
+      max-width: 250px;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+    .donation-text {
+      flex: 1 1 300px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #004aad;
+      color: white;
+      font-size: 0.9rem;
+    }
+    /* Responsive */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .donation-info {
+        flex-direction: column;
+      }
+      .donation-info img {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<button id="lang-toggle">English</button>
-
 <header>
-  <h1 class="lang-bn">Sterling Foundation</h1>
-  <h1 class="lang-en" style="display:none;">Sterling Foundation</h1>
-  <p class="lang-bn">মানবতার পাশে স্টার্লিং</p>
-  <p class="lang-en" style="display:none;">Sterling at the Service of Humanity</p>
+  <h1>Sterling Foundation</h1>
+  <p>আসুন সবাই মিলে দয়ালু হই, দরিদ্রদের পাশে দাঁড়াই।</p>
 </header>
 
 <nav>
-  <a href="#about" class="lang-bn">আমাদের সম্পর্কে</a>
-  <a href="#about" class="lang-en" style="display:none;">About Us</a>
-  <a href="#projects" class="lang-bn">প্রকল্প</a>
-  <a href="#projects" class="lang-en" style="display:none;">Projects</a>
-  <a href="#donate" class="lang-bn">অনুদান দিন</a>
-  <a href="#donate" class="lang-en" style="display:none;">Donate</a>
-  <a href="#contact" class="lang-bn">যোগাযোগ</a>
-  <a href="#contact" class="lang-en" style="display:none;">Contact</a>
+  <a href="#home">Home / হোম</a>
+  <a href="#donate">Donate / দান করুন</a>
+  <a href="#about">About Us / আমাদের সম্পর্কে</a>
+  <a href="#contact">Contact / যোগাযোগ</a>
 </nav>
 
-<section class="intro">
-  <h2 class="lang-bn">স্বাগতম Sterling Foundation-এ</h2>
-  <h2 class="lang-en" style="display:none;">Welcome to Sterling Foundation</h2>
-  <p class="lang-bn">
-    আমরা দরিদ্র, অসহায় এবং দুর্যোগে আক্রান্ত মানুষদের পাশে দাঁড়াই। আপনার সহানুভূতিই তাদের জীবনের পরিবর্তন আনতে পারে।
-  </p>
-  <p class="lang-en" style="display:none;">
-    We stand by the poor, helpless, and disaster-affected people. Your compassion can change their lives.
-  </p>
-  <a href="#donate" class="donate-button lang-bn">এখনই অনুদান দিন</a>
-  <a href="#donate" class="donate-button lang-en" style="display:none;">Donate Now</a>
-</section>
+<main>
+  <section id="home">
+    <h2>Welcome to Sterling Foundation</h2>
+    <p>We are dedicated to helping the poor and needy. Join us in making the world a better place through donations and kindness.</p>
+  </section>
 
-<section id="about">
-  <h2 class="lang-bn">আমাদের সম্পর্কে</h2>
-  <h2 class="lang-en" style="display:none;">About Us</h2>
-  <p class="lang-bn">
-    Sterling Foundation একটি অলাভজনক প্রতিষ্ঠান যা বাংলাদেশের সুবিধাবঞ্চিত মানুষদের জন্য কাজ করে। আমাদের লক্ষ্য হলো শিক্ষা, স্বাস্থ্য এবং খাদ্য সহায়তা প্রদান করা।
-  </p>
-  <p class="lang-en" style="display:none;">
-    Sterling Foundation is a nonprofit organization working for underprivileged people in Bangladesh. Our goal is to provide education, healthcare, and food assistance.
-  </p>
-</section>
-
-<section id="projects">
-  <h2 class="lang-bn">আমাদের প্রকল্পসমূহ</h2>
-  <h2 class="lang-en" style="display:none;">Our Projects</h2>
-  <ul class="lang-bn">
-    <li>ফ্রি স্বাস্থ্য ক্যাম্প</li>
-    <li>শিশু শিক্ষায় সহায়তা</li>
-    <li>ত্রাণ বিতরণ কার্যক্রম</li>
-  </ul>
-  <ul class="lang-en" style="display:none;">
-    <li>Free Health Camps</li>
-    <li>Support for Child Education</li>
-    <li>Relief Distribution Activities</li>
-  </ul>
-</section>
-
-<section id="donate">
-  <h2 class="lang-bn">অনুদান দিন</h2>
-  <h2 class="lang-en" style="display:none;">Donate</h2>
-  <p class="lang-bn">আপনার অনুদানই কারো মুখে হাসি ফোটাতে পারে। আমরা গ্রহণ করি bKash, Nagad, ব্যাংক ট্রান্সফার এবং ক্রিপ্টোকারেন্সি।</p>
-  <p class="lang-en" style="display:none;">Your donation can bring smiles to faces. We accept bKash, Nagad, Bank Transfer, and Cryptocurrency.</p>
-  
-  <div class="crypto-section">
-    <h3 class="lang-bn">ক্রিপ্টো ডোনেশন করুন</h3>
-    <h3 class="lang-en" style="display:none;">Donate with Cryptocurrency</h3>
-    
-    <div class="crypto-address">
-      <h4>Bitcoin (BTC)</h4>
-      <p id="btc-address">1BoatSLRHtKNngkdXEeobR76b53LETtpyT</p>
-      <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=bitcoin:1BoatSLRHtKNngkdXEeobR76b53LETtpyT" alt="BTC QR" class="qr-code" />
+  <section id="donate">
+    <h2>Make a Donation / দান করুন</h2>
+    <div class="donation-info">
+      <img src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&fit=crop&w=600&q=80" alt="Helping Hands" />
+      <div class="donation-text">
+        <p>
+          You can donate through cryptocurrency or traditional methods. Every bit helps someone in need.<br />
+          <strong>আপনি ক্রিপ্টোকারেন্সি বা সাধারণ পদ্ধতিতে দান করতে পারেন। আপনার একটি ছোট্ট সাহায্য অনেকের জীবন বদলে দিতে পারে।</strong>
+        </p>
+        <ul>
+          <li>Bitcoin: <code>1SterlingBTCAddressExample123</code></li>
+          <li>Ethereum: <code>0xSterlingETHAddressExample456</code></li>
+          <li>bKash: <code>017XXXXXXXX</code></li>
+        </ul>
+      </div>
     </div>
-    
-    <div class="crypto-address">
-      <h4>Ethereum (ETH)</h4>
-      <p id="eth-address">0x32Be343B94f860124dC4fEe278FDCBD38C102D88</p>
-      <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=ethereum:0x32Be343B94f860124dC4fEe278FDCBD38C102D88" alt="ETH QR" class="qr-code" />
-    </div>
-    
-    <div class="crypto-address">
-      <h4>Tether (USDT)</h4>
-      <p id="usdt-address">TJ2tszyHWkSe3wz6d3YhvXUVG8a3bFuM7S</p>
-      <img src="https://chart.googleapis.com/chart?chs=150x150&cht=qr&chl=usdt:TJ2tszyHWkSe3wz6d3YhvXUVG8a3bFuM7S" alt="USDT QR" class="qr-code" />
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="donation-history">
-  <h2 class="lang-bn">আপনার অনুদানের তথ্য দেখুন</h2>
-  <h2 class="lang-en" style="display:none;">View Your Donation History</h2>
-  <div id="donation-search">
-    <input type="text" id="donor-name" placeholder="আপনার নাম লিখুন / Enter your name" />
-    <button onclick="searchDonations()">অনুসন্ধান / Search</button>
-  </div>
-  <div id="donation-results"></div>
-</section>
+  <section id="about">
+    <h2>About Us / আমাদের সম্পর্কে</h2>
+    <p>
+      Sterling Foundation একটি চ্যারিটি ফাউন্ডেশন যা দরিদ্র ও অসহায় মানুষের পাশে দাঁড়ায়। আমরা বিশ্বাস করি, সামান্য সাহায্য দিয়েই পৃথিবীকে বদলে ফেলা যায়। <br />
+      We believe that small acts of kindness can change the world.
+    </p>
+  </section>
 
-<section id="contact">
-  <h2 class="lang-bn">যোগাযোগ করুন</h2>
-  <h2 class="lang-en" style="display:none;">Contact Us</h2>
-  <p class="lang-bn">
-    ইমেইল: sterlingfoundation@email.com<br />
-    ফোন: ০১৭০০-০০০০০০<br />
-    ঠিকানা: ঢাকা, বাংলাদেশ
-  </p>
-  <p class="lang-en" style="display:none;">
-    Email: sterlingfoundation@email.com<br />
-    Phone: +8801700-000000<br />
-    Address: Dhaka, Bangladesh
-  </p>
-</section>
+  <section id="contact">
+    <h2>Contact Us / যোগাযোগ</h2>
+    <p>Email: <a href="mailto:contact@sterlingfoundation.org">contact@sterlingfoundation.org</a></p>
+    <p>Phone: +880 17XXXXXXXX</p>
+  </section>
+</main>
 
 <footer>
-  <p>&copy; 2025 Sterling Foundation | সমস্ত অধিকার সংরক্ষিত | All rights reserved</p>
+  &copy; 2025 Sterling Foundation. All rights reserved.
 </footer>
-
-<script>
-  // Language toggle button
-  const langToggleBtn = document.getElementById('lang-toggle');
-  let isBangla = true;
-  langToggleBtn.addEventListener('click', () => {
-    isBangla = !isBangla;
-    document.querySelectorAll('.lang-bn').forEach(el => el.style.display = isBangla ? 'block' : 'none');
-    document.querySelectorAll('.lang-en').forEach(el => el.style.display = isBangla ? 'none' : 'block');
-    langToggleBtn.textContent = isBangla ? 'English' : 'বাংলা';
-  });
-
-  // Demo donation data
-  const demoDonations = [
-    {name: 'Rahim', amount: 500, method: 'bKash', txId: 'TX123456'},
-    {name: 'Karim', amount: 0.02, method: 'Bitcoin', txId: 'BTC789012'},
-    {name: 'Fatema', amount: 1000, method: 'Bank Transfer', txId: 'BANK345678'},
-    {name: 'Rahim', amount: 0.05, method: 'Ethereum', txId: 'ETH901234'},
-  ];
-
-  function searchDonations() {
-    const name = document.getElementById('donor-name').value.trim().toLowerCase();
-    const resultsDiv = document.getElementById('donation-results');
-    if(!name) {
-      resultsDiv.innerHTML = '<p style="text-align:center;color:red;">দয়া করে আপনার নাম লিখুন।<br>Please enter your name.</p>';
-      return;
-    }
-    const filtered = demoDonations.filter(d => d.name.toLowerCase() === name);
-    if(filtered.length === 0) {
-      resultsDiv.innerHTML = `<p style="text-align:center;">${isBangla ? 'আপনার কোন অনুদান পাওয়া যায়নি।' : 'No donations found for your name.'}</p>`;
-      return;
-    }
-    let tableHTML = `<table><tr><th>${isBangla ? 'নাম' : 'Name'}</th><th>${isBangla ? 'পরিমাণ' : 'Amount'}</th><th>${isBangla ? 'পদ্ধতি' : 'Method'}</th><th>${isBangla ? 'লেনদেন আইডি' : 'Transaction ID'}</th></tr>`;
-    filtered.forEach(d => {
-      tableHTML += `<tr><td>${d.name}</td><td>${d.amount}</td><td>${d.method}</td><td>${d.txId}</td></tr>`;
-    });
-    tableHTML += '</table>';
-    resultsDiv.innerHTML = tableHTML;
-  }
-</script>
 
 </body>
 </html>
