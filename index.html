@@ -3,168 +3,82 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sterling Foundation</title>
+<title>Sterling Foundation - Language Toggle</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
-  * {
-    box-sizing: border-box;
-  }
   body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background-color: #f0f4f8;
-    color: #333;
-    line-height: 1.6;
-  }
-  header {
-    background: linear-gradient(135deg, #0052d4 0%, #4364f7 100%);
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0;
-    font-size: 3rem;
-    letter-spacing: 2px;
-  }
-  header p {
-    margin-top: 10px;
-    font-size: 1.3rem;
-    opacity: 0.85;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: #f9fafb;
+    color: #222;
   }
   nav {
-    background-color: white;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    margin-bottom: 20px;
+    text-align: right;
   }
-  nav ul {
-    margin: 0;
-    padding: 0 20px;
-    display: flex;
-    justify-content: center;
-    list-style: none;
+  button.lang-toggle {
+    padding: 8px 16px;
+    background-color: #004aad;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
   }
-  nav ul li {
-    margin: 0 15px;
-  }
-  nav ul li a {
-    display: block;
-    padding: 15px 0;
-    text-decoration: none;
-    font-weight: 600;
-    color: #0052d4;
-    transition: color 0.3s ease;
-  }
-  nav ul li a:hover {
-    color: #4364f7;
-  }
-  main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 0 20px;
+  button.lang-toggle:hover {
+    background-color: #003080;
   }
   section {
-    background-color: white;
-    padding: 30px 40px;
-    margin-bottom: 40px;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
-  section h2 {
-    color: #0052d4;
-    margin-bottom: 20px;
-    font-weight: 700;
-    font-size: 2rem;
+  h1 {
+    color: #004aad;
+    margin-bottom: 10px;
   }
-  section p {
-    font-size: 1.1rem;
-  }
-  .donation-list {
-    list-style: none;
-    padding: 0;
-  }
-  .donation-list li {
-    background-color: #e9f0ff;
-    margin-bottom: 15px;
-    padding: 15px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 1.1rem;
-    word-break: break-word;
-    box-shadow: inset 0 0 8px #d6e2ff;
-  }
-  footer {
-    background: #0052d4;
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-  }
-
-  /* Responsive */
-  @media (max-width: 600px) {
-    header h1 {
-      font-size: 2rem;
-    }
-    section {
-      padding: 20px 20px;
-    }
-    nav ul {
-      flex-direction: column;
-      align-items: center;
-    }
-    nav ul li {
-      margin: 5px 0;
-    }
+  p {
+    line-height: 1.5;
   }
 </style>
 </head>
 <body>
 
-<header>
-  <h1>Sterling Foundation</h1>
-  <p>Join us to help the poor and needy</p>
-</header>
-
 <nav>
-  <ul>
-    <li><a href="#about">About Us</a></li>
-    <li><a href="#donate">Donate</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
+  <button class="lang-toggle" id="langBtn">বাংলা</button>
 </nav>
 
-<main>
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Sterling Foundation is a charity organization dedicated to supporting the poor and helpless. We believe that small acts of kindness can change the world. Join us in making a difference and spreading hope.
-    </p>
-  </section>
+<section id="content-en">
+  <h1>Sterling Foundation</h1>
+  <p>Join us to help the poor and needy. We believe small acts of kindness can change the world. Donate with cryptocurrency securely and easily.</p>
+</section>
 
-  <section id="donate">
-    <h2>Donate with Cryptocurrency</h2>
-    <ul class="donation-list">
-      <li><strong>Bitcoin (BTC):</strong> 1SterlingBTCAddressExample</li>
-      <li><strong>Ethereum (ETH):</strong> 0xSterlingETHAddressExample</li>
-      <li><strong>USDT (TRC20):</strong> TSterlingUSDTAddressExample</li>
-    </ul>
-  </section>
+<section id="content-bn" style="display:none;">
+  <h1>স্টার্লিং ফাউন্ডেশন</h1>
+  <p>দরিদ্র ও অসহায়দের সাহায্য করতে আমাদের সাথে যোগ দিন। আমরা বিশ্বাস করি সামান্য সহায়তাও পৃথিবী বদলে দিতে পারে। ক্রিপ্টোকারেন্সির মাধ্যমে সহজ ও নিরাপদে দান করুন।</p>
+</section>
 
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: <a href="mailto:contact@sterlingfoundation.org">contact@sterlingfoundation.org</a></p>
-    <p>Phone: +880 17XXXXXXXXX</p>
-  </section>
-</main>
+<script>
+  const langBtn = document.getElementById('langBtn');
+  const enContent = document.getElementById('content-en');
+  const bnContent = document.getElementById('content-bn');
 
-<footer>
-  &copy; 2025 Sterling Foundation. All rights reserved.
-</footer>
+  langBtn.addEventListener('click', () => {
+    if (enContent.style.display === 'none') {
+      // Show English, hide Bangla
+      enContent.style.display = 'block';
+      bnContent.style.display = 'none';
+      langBtn.textContent = 'বাংলা';
+    } else {
+      // Show Bangla, hide English
+      enContent.style.display = 'none';
+      bnContent.style.display = 'block';
+      langBtn.textContent = 'English';
+    }
+  });
+</script>
 
 </body>
 </html>
