@@ -1,84 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Sterling Foundation - Language Toggle</title>
-<style>
-  body {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background: #f9fafb;
-    color: #222;
-  }
-  nav {
-    margin-bottom: 20px;
-    text-align: right;
-  }
-  button.lang-toggle {
-    padding: 8px 16px;
-    background-color: #004aad;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: bold;
-  }
-  button.lang-toggle:hover {
-    background-color: #003080;
-  }
-  section {
-    max-width: 700px;
-    margin: auto;
-    background: white;
-    padding: 20px 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  h1 {
-    color: #004aad;
-    margin-bottom: 10px;
-  }
-  p {
-    line-height: 1.5;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sterling Charity Foundation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f7fa;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1532635247-21e63afeed61?auto=format&fit=crop&w=1500&q=80') no-repeat center/cover;
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+    }
+    nav {
+      background-color: #004aad;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+    .section {
+      background: white;
+      padding: 30px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .section img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .donate-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+    }
+    footer {
+      text-align: center;
+      background-color: #004aad;
+      color: white;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Sterling Charity Foundation</h1>
+    <p>Helping the helpless, one step at a time</p>
+  </header>
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#programs">Our Work</a>
+    <a href="#donate">Donate</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-<nav>
-  <button class="lang-toggle" id="langBtn">বাংলা</button>
-</nav>
+  <div class="container">
+    <section class="section" id="about">
+      <h2>About Us</h2>
+      <p>Sterling Foundation is a non-profit charity that helps underprivileged children, supports disaster relief efforts, and provides access to clean water and education across rural communities. We are committed to transparency and action.</p>
+      <img src="https://images.unsplash.com/photo-1587502537745-84f88ba3f19d?auto=format&fit=crop&w=1400&q=80" alt="Helping Children">
+    </section>
 
-<section id="content-en">
-  <h1>Sterling Foundation</h1>
-  <p>Join us to help the poor and needy. We believe small acts of kindness can change the world. Donate with cryptocurrency securely and easily.</p>
-</section>
+    <section class="section" id="programs">
+      <h2>Our Work</h2>
+      <ul>
+        <li><strong>Food Distribution:</strong> Monthly food packs to 1,000+ families.</li>
+        <li><strong>Clean Water Projects:</strong> 25+ deep tube wells installed in remote villages.</li>
+        <li><strong>Emergency Aid:</strong> Relief support during floods, storms, and pandemics.</li>
+        <li><strong>Education Support:</strong> Sponsoring 200+ children’s school fees.</li>
+      </ul>
+      <img src="https://images.unsplash.com/photo-1600488996291-c6f30fba7c2b?auto=format&fit=crop&w=1400&q=80" alt="Community Help">
+    </section>
 
-<section id="content-bn" style="display:none;">
-  <h1>স্টার্লিং ফাউন্ডেশন</h1>
-  <p>দরিদ্র ও অসহায়দের সাহায্য করতে আমাদের সাথে যোগ দিন। আমরা বিশ্বাস করি সামান্য সহায়তাও পৃথিবী বদলে দিতে পারে। ক্রিপ্টোকারেন্সির মাধ্যমে সহজ ও নিরাপদে দান করুন।</p>
-</section>
+    <section class="section" id="donate">
+      <h2>Donate Now</h2>
+      <p>We accept donations through cryptocurrency and other methods. 100% of donations go directly to those in need.</p>
+      <ul>
+        <li><strong>Bitcoin:</strong> 1SterlingBTCAddressExample</li>
+        <li><strong>Ethereum:</strong> 0xSterlingETHAddressExample</li>
+        <li><strong>USDT (TRC20):</strong> TSterlingUSDTAddressExample</li>
+      </ul>
+      <a class="donate-btn" href="#">Donate with Crypto</a>
+    </section>
 
-<script>
-  const langBtn = document.getElementById('langBtn');
-  const enContent = document.getElementById('content-en');
-  const bnContent = document.getElementById('content-bn');
+    <section class="section" id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: contact@sterlingfoundation.org</p>
+      <p>Phone: +880 17XXXXXXXX</p>
+      <p>Facebook: <a href="https://facebook.com/sterlingfoundation" target="_blank">facebook.com/sterlingfoundation</a></p>
+    </section>
+  </div>
 
-  langBtn.addEventListener('click', () => {
-    if (enContent.style.display === 'none') {
-      // Show English, hide Bangla
-      enContent.style.display = 'block';
-      bnContent.style.display = 'none';
-      langBtn.textContent = 'বাংলা';
-    } else {
-      // Show Bangla, hide English
-      enContent.style.display = 'none';
-      bnContent.style.display = 'block';
-      langBtn.textContent = 'English';
-    }
-  });
-</script>
+  <footer>
+    &copy; 2025 Sterling Foundation. All rights reserved.
+  </footer>
 
 </body>
 </html>
